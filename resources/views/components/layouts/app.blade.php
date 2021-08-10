@@ -14,12 +14,12 @@
 <body class="antialiased">
     <div id="app" class="w-full min-h-screen">
         <header class="w-full h-28 px-5 border-b border-gray-300">
-            <nav class="flex w-full h-full">
-                <div class="flex justify-between my-auto">
+            <nav class="flex w-full h-full justify-center">
+                <div class="flex justify-between my-auto w-96">
                     <a
                         href="{{ route('home') }}"
                         class="py-5 px-7 {{ url()->current('home') ? 'bg-gray-200 text-gray-500' : 'bg-gray-300 hover:bg-gray-200 text-black hover:text-gray-500' }}"
-                    >Home</a>
+                    >{{ __('Home') }}</a>
                 </div>
             </nav>
         </header>
