@@ -6,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title }} - {{ config('app.name') }}</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css">
+
     {{-- Styles --}}
     @livewireStyles
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @stack('css')
 </head>
-<body class="antialiased">
+<body class="antialiased" style="font-family: 'Cascadia Code', sans-serif;">
     <div id="app" class="w-full min-h-screen">
         <header class="w-full h-28 px-5 border-b border-gray-300">
             <nav class="flex w-full h-full justify-center">
@@ -20,6 +23,12 @@
                         href="{{ route('home') }}"
                         class="py-5 px-7 {{ url()->current('home') ? 'bg-gray-200 text-gray-500' : 'bg-gray-300 hover:bg-gray-200 text-black hover:text-gray-500' }}"
                     >{{ __('Home') }}</a>
+                </div>
+                <div class="flex justify-between my-auto w-96">
+                    <a
+                        href="{{ route('cart') }}"
+                        class="py-5 px-7 {{ url()->current('cart') ? 'bg-gray-200 text-gray-500' : 'bg-gray-300 hover:bg-gray-200 text-black hover:text-gray-500' }}"
+                    >{{ __('Cart') }}</a>
                 </div>
             </nav>
         </header>
