@@ -1,6 +1,6 @@
 <div class="h-full w-full rounded-md text-gray-900">
     <div class="mx-auto my-5">
-        <h1 class="text-center text-4xl">{{ __('Cart') }}</h1>
+        <h1 class="text-center text-4xl">{{ __('Cart Livewire') }}</h1>
     </div>
 
     <hr />
@@ -30,7 +30,7 @@
                     <tr class="border-b hover:bg-orange-100 bg-gray-100">
                         <td class="p-3 px-5">
                             <div class="flex flex-col">
-                                <select name="" id="" class="form" wire:model="items.{{ $itemKey }}.product_id" wire:change="changeValue({{ $itemKey }})">
+                                <select wire:model="items.{{ $itemKey }}.product_id" wire:change="changeValue({{ $itemKey }})">
                                     <option value="">{{ __('Select a product') }}</option>
                                     @forelse ($products as $product)
                                         <option value="{{ $product->id }}">{{ $product->name }}</option>

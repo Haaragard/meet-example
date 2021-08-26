@@ -27,13 +27,13 @@
             </div>
 
             <nav class="flex w-full h-full justify-center">
-                <div class="flex justify-between w-96">
-                    <div class="flex items-center px-5 {{ Route::is('cart') ? 'bg-gray-300' : '' }}">
+                <div class="flex w-1/2">
+                    <div class="flex items-center px-5">
                         <a
                             href="{{ route('cart') }}"
-                            class="{{ Route::is('cart') ? '' : 'hover:text-black' }}"
+                            class="{{ Route::is('cart') ? '' : 'text-gray-500 hover:text-black' }}"
                         >
-                            {{ __('Cart') }}
+                            {{ __('Cart Livewire') }}
                         </a>
                     </div>
                 </div>
