@@ -16,19 +16,26 @@
 </head>
 <body class="antialiased" style="font-family: 'Cascadia Code', sans-serif;">
     <div id="app" class="w-full min-h-screen">
-        <header class="w-full h-28 px-5 border-b border-gray-300">
+        <header class="flex w-full h-20 px-5 border-b border-gray-300 shadow-sm">
+            <div class="my-auto">
+                <a
+                    href="{{ route('home') }}"
+                    class="{{ Route::is('home') ? '' : 'hover:text-black' }}"
+                >
+                    {{ __('Home') }}
+                </a>
+            </div>
+
             <nav class="flex w-full h-full justify-center">
-                <div class="flex justify-between my-auto w-96">
-                    <a
-                        href="{{ route('home') }}"
-                        class="py-5 px-7 {{ url()->current('home') ? 'bg-gray-200 text-gray-500' : 'bg-gray-300 hover:bg-gray-200 text-black hover:text-gray-500' }}"
-                    >{{ __('Home') }}</a>
-                </div>
-                <div class="flex justify-between my-auto w-96">
-                    <a
-                        href="{{ route('cart') }}"
-                        class="py-5 px-7 {{ url()->current('cart') ? 'bg-gray-200 text-gray-500' : 'bg-gray-300 hover:bg-gray-200 text-black hover:text-gray-500' }}"
-                    >{{ __('Cart') }}</a>
+                <div class="flex justify-between w-96">
+                    <div class="flex items-center px-5 {{ Route::is('cart') ? 'bg-gray-300' : '' }}">
+                        <a
+                            href="{{ route('cart') }}"
+                            class="{{ Route::is('cart') ? '' : 'hover:text-black' }}"
+                        >
+                            {{ __('Cart') }}
+                        </a>
+                    </div>
                 </div>
             </nav>
         </header>

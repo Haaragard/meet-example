@@ -1,4 +1,4 @@
-<div class="h-full w-full border border-black rounded-md text-gray-900 bg-gray-50">
+<div class="h-full w-full rounded-md text-gray-900">
     <div class="mx-auto my-5">
         <h1 class="text-center text-4xl">{{ __('Cart') }}</h1>
     </div>
@@ -11,7 +11,7 @@
                 {{ __('Products') }}
             </h2>
         </div>
-        <div class="px-3 py-4 flex justify-center">
+        <div class="flex px-3 py-4 justify-center">
             <table class="w-full text-md bg-white shadow-md rounded mb-4">
                 <thead class="border-b">
                     <th class="text-left p-3 px-5">
