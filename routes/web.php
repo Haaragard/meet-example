@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/cart', function () {
     return view('pages.cart.cart');
 })->name('cart');
+
+Route::get('/cart-with-alpinejs', function () {
+    return view('pages.cart-with-alpinejs.cart-with-alpinejs');
+})->name('cart-with-alpinejs');

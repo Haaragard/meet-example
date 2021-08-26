@@ -36,6 +36,14 @@
                             {{ __('Cart Livewire') }}
                         </a>
                     </div>
+                    <div class="flex items-center px-5 ml-5">
+                        <a
+                            href="{{ route('cart-with-alpinejs') }}"
+                            class="{{ Route::is('cart-with-alpinejs') ? '' : 'text-gray-500 hover:text-black' }}"
+                        >
+                            {{ __('Cart Livewire + Alpine') }}
+                        </a>
+                    </div>
                 </div>
             </nav>
         </header>
